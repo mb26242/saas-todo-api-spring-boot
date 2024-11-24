@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management API Documentation</title>
+
+    <!-- Bootstrap CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ2Q6Q5m0uQF8PrMsnOQ2Me72D8/2ZX9JEyEq7gfOMV5RM9FJQwJc9Q6F5nI" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Welcome to the Task Management API</h1>
+        <p>Here are the available endpoints:</p>
+
+        <h2>Task Management</h2>
+        
+        <h3>/users/{userId}/tasks</h3>
+        <p>Manage all tasks associated with a user.</p>
+        <ul class="list-group">
+            <li class="list-group-item"><strong>GET</strong> /users/{userId}/tasks - Get all tasks for a specific user.</li>
+            <p>Returns a list of tasks assigned to the user specified by <code>{userId}</code>.</p>
+
+            <li class="list-group-item"><strong>POST</strong> /users/{userId}/tasks - Create a new task for a user.</li>
+            <p>Creates a new task for the user identified by <code>{userId}</code>.</p>
+        </ul>
+
+        <h3>/users/{userId}/tasks/{taskId}</h3>
+        <p>Manage a specific task assigned to a user.</p>
+        <ul class="list-group">
+            <li class="list-group-item"><strong>GET</strong> /users/{userId}/tasks/{taskId} - Get details of a specific task for a user.</li>
+            <p>Returns the details of the task identified by <code>{taskId}</code> for the user identified by <code>{userId}</code>.</p>
+
+            <li class="list-group-item"><strong>PUT</strong> /users/{userId}/tasks/{taskId} - Update a specific task for a user.</li>
+            <p>Updates the task identified by <code>{taskId}</code> for the user identified by <code>{userId}</code>.</p>
+
+            <li class="list-group-item"><strong>DELETE</strong> /users/{userId}/tasks/{taskId} - Delete a specific task for a user.</li>
+            <p>Deletes the task identified by <code>{taskId}</code> for the user identified by <code>{userId}</code>.</p>
+        </ul>
+
+        <h2>Other Resources</h2>
+        <ul class="list-group">
+            <li class="list-group-item">GET /users - View all users</li>
+            <li class="list-group-item">GET /companies - View all companies</li>
+        </ul>
+
+        <h2>Utilities</h2>
+        <ul class="list-group">
+            <li class="list-group-item">GET /populate - Populate the repositories with initial data</li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item">GET /emptyRepositories - Delete all the data from the repositories</li>
+        </ul>
+    </div>
+
+
+    
+
+</body>
+</html>
